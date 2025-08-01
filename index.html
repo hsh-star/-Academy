@@ -2507,20 +2507,7 @@
 
     <!-- وصف الأكاديمية أعلى التبويبات -->
     <div class="afnan-academy-desc" id="academyDescBox">
-      <div class="academy-desc-content">
-        <div class="academy-desc-main">
-          <span class="academy-desc-title">نظام تسجيل حضور وانصراف</span>
-        </div>
-        <div class="academy-desc-details">
-          <span class="academy-desc-circle">حلقة الشيخة نظيرة ودن</span>
-          <span class="academy-desc-prayer">حفظها الله</span>
-          <span class="academy-desc-subject">تجويد أفنان</span>
-        </div>
-        <div class="academy-desc-students">
-          <span class="academy-desc-batch">طالبات الدُفعة الأولى</span>
-          <span class="academy-desc-level">المستوى الثاني</span>
-        </div>
-      </div>
+      نظام تسجيل الحضور والانصراف لأكاديمية أفنان لتعليم القرآن وعلومه
       <!-- أيقونة المسجد في الأسفل يسار -->
       <img src="logo-afnan.png" alt="مسجد" class="academy-mosque-icon" />
     </div>
@@ -3200,7 +3187,7 @@
       <script>
       // دالة حفظ وصف الأكاديمية
       function saveAcademyDesc() {
-        const desc = document.getElementById('academyDescInput').value.trim() || 'نظام تسجيل حضور وانصراف حلقة الشيخة نظيرة ودن- حفظها الله - تجويد أفنان طالبات الدُفعة الأولى المستوى الثاني';
+        const desc = document.getElementById('academyDescInput').value.trim() || 'نظام تسجيل الحضور والانصراف لأكاديمية أفنان لتعليم القرآن وعلومه';
         const bg = document.getElementById('academyDescBgColor').value;
         const color = document.getElementById('academyDescTextColor').value;
         const font = document.getElementById('academyDescFont').value;
@@ -9076,7 +9063,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <script>
   // إعدادات وصف الأكاديمية
   function loadAcademyDescSettings() {
-    const desc = localStorage.getItem('academyDescText') || 'نظام تسجيل حضور وانصراف حلقة الشيخة نظيرة ودن- حفظها الله - تجويد أفنان طالبات الدُفعة الأولى المستوى الثاني';
+    const desc = localStorage.getItem('academyDescText') || 'نظام تسجيل الحضور والانصراف لأكاديمية أفنان لتعليم القرآن وعلومه';
     const bg = localStorage.getItem('academyDescBg') || '#f9f6ef';
     const color = localStorage.getItem('academyDescColor') || '#3b2e13';
     const descBox = document.getElementById('academyDescBox');
@@ -9137,7 +9124,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function applyAcademyDescSettings() {
       const descBox = document.getElementById('academyDescBox');
       if (descBox) {
-        const desc = localStorage.getItem('academyDescText') || 'نظام تسجيل حضور وانصراف حلقة الشيخة نظيرة ودن- حفظها الله - تجويد أفنان طالبات الدُفعة الأولى المستوى الثاني';
+        const desc = localStorage.getItem('academyDescText') || 'نظام تسجيل الحضور والانصراف لأكاديمية أفنان لتعليم القرآن وعلومه';
         const bg = localStorage.getItem('academyDescBg') || '#f5f5f5';
         const color = localStorage.getItem('academyDescColor') || '#3b2e13';
         const font = localStorage.getItem('academyDescFont') || "'Cairo', sans-serif";
@@ -9166,7 +9153,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // إضافة مستمع لزر حفظ الوصف
     if(document.getElementById('saveAcademyDescBtn')) {
       document.getElementById('saveAcademyDescBtn').addEventListener('click', function() {
-        const desc = document.getElementById('academyDescInput').value.trim() || 'نظام تسجيل حضور وانصراف حلقة الشيخة نظيرة ودن- حفظها الله - تجويد أفنان طالبات الدُفعة الأولى المستوى الثاني';
+        const desc = document.getElementById('academyDescInput').value.trim() || 'نظام تسجيل الحضور والانصراف لأكاديمية أفنان لتعليم القرآن وعلومه';
         const bg = document.getElementById('academyDescBgColor').value;
         const color = document.getElementById('academyDescTextColor').value;
         localStorage.setItem('academyDescText', desc);
