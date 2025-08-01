@@ -1,0 +1,78 @@
+/* ========== HEADER & LOGO - CLEAN VERSION ========== */
+header.afnan-header-fixed[object Object]  background: #fff;
+  border-bottom:1px solid #e5
+  position: fixed;
+  top: 0; right: 0; left: 0;
+  width:100%;
+  z-index: 1000;
+  margin-bottom:0
+  padding: 0;
+}
+
+.afnan-header-inner[object Object]
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 32px;
+  min-height: 32px;
+  padding: 0px;
+}
+
+.afnan-logo [object Object]
+  height: 20x;
+  width: auto;
+  object-fit: contain;
+  margin: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+  order: 1;
+  flex-shrink: 0;
+}
+
+.afnan-nav-link, .lang-btn [object Object]  color: #8B6!important;
+  font-family:Cairo, jawal', sans-serif;
+  font-weight: bold;
+  font-size: 0.8rem;
+  text-decoration: none;
+  transition: color 0.2;
+  padding: 0 2}
+
+.afnan-nav-link:hover, .afnan-nav-link.active, .lang-btn:hover [object Object]  color: #BD9750!important;
+}
+
+.afnan-nav-list {
+  gap: 16px;
+}
+
+.form-container[object Object]  margin-top:32px !important;
+}
+
+.header-gap[object Object]
+  display: none !important;
+  height:0 !important;
+}
+
+/* ========== MOBILE HEADER ========== */
+@media (max-width:600[object Object]  .afnan-header-inner [object Object]    height:24px !important;
+    min-height:24px !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0important;
+  }
+  
+  .afnan-logo [object Object]    height:14px !important;
+    max-height:14px !important;
+    width: auto !important;
+    margin:0 auto !important;
+  }
+  
+  .afnan-nav-link, .lang-btn [object Object]
+    font-size:0.7m !important;
+  }
+  
+  .form-container [object Object]    margin-top: 24x !important;
+  }
+}
+/* ========== END HEADER & LOGO ========== */ 
