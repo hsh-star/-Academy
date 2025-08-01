@@ -2488,7 +2488,7 @@
     <!-- ====== نهاية الهيدر ====== -->
 
     <!-- وصف الأكاديمية أعلى التبويبات -->
-    <div class="afnan-academy-desc" id="academyDescBox">
+    <div class="afnan-academy-desc" id="academyDescBox" style="display: block !important; visibility: visible !important; opacity: 1 !important;">
       <div class="academy-desc-content">
         <div class="academy-desc-main">
           <div class="academy-desc-title">نظام تسجيل حضور وانصراف</div>
@@ -2505,20 +2505,7 @@
       <img src="logo-afnan.png" alt="مسجد" class="academy-mosque-icon" />
     </div>
 
-    <script>
-    // إجبار إعادة تحميل المحتوى الجديد
-    document.addEventListener('DOMContentLoaded', function() {
-      // مسح localStorage تماماً لضمان التحديث
-      localStorage.removeItem('academyDescText');
-      localStorage.removeItem('academyDescVersion');
-      
-      // إجبار إعادة تحميل الصفحة مرة واحدة فقط
-      if (!sessionStorage.getItem('pageReloaded')) {
-        sessionStorage.setItem('pageReloaded', 'true');
-        setTimeout(() => location.reload(), 100);
-      }
-    });
-    </script>
+
 
 
 
@@ -3218,16 +3205,9 @@
         // تحديث الوصف في الصفحة
         const descBox = document.getElementById('academyDescBox');
         if(descBox) {
-          // الحفاظ على الهيكل الأساسي للوصف
-          const currentHTML = descBox.innerHTML;
-          if (currentHTML.includes('academy-desc-content')) {
-            // تحديث النص فقط داخل العناصر الموجودة
-            const titleElement = descBox.querySelector('.academy-desc-title');
-            if (titleElement) {
-              titleElement.textContent = 'نظام تسجيل حضور وانصراف';
-            }
-          } else {
-            // إذا لم يكن الهيكل موجود، أنشئه
+          // التأكد من وجود الهيكل الجديد دائماً
+          if (!descBox.querySelector('.academy-desc-content')) {
+            // إنشاء الهيكل الجديد
             descBox.innerHTML = `
               <div class="academy-desc-content">
                 <div class="academy-desc-main">
@@ -9101,9 +9081,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const color = localStorage.getItem('academyDescColor') || '#3b2e13';
     const descBox = document.getElementById('academyDescBox');
     if(descBox) {
-      // الحفاظ على الهيكل الأساسي للوصف
-      const currentHTML = descBox.innerHTML;
-      if (!currentHTML.includes('academy-desc-content')) {
+      // التأكد من وجود الهيكل الجديد دائماً
+      if (!descBox.querySelector('.academy-desc-content')) {
         // إنشاء الهيكل الجديد
         descBox.innerHTML = `
           <div class="academy-desc-content">
@@ -9121,8 +9100,9 @@ document.addEventListener('DOMContentLoaded', function() {
           <img src="logo-afnan.png" alt="مسجد" class="academy-mosque-icon" />
         `;
       }
-      descBox.style.background = bg;
-      descBox.style.color = color;
+      // تطبيق الستايل على العنصر الرئيسي فقط
+      if (bg && bg !== '#f9f6ef') descBox.style.background = bg;
+      if (color && color !== '#3b2e13') descBox.style.color = color;
     }
     if(document.getElementById('academyDescInput')) {
       document.getElementById('academyDescInput').value = desc;
@@ -9133,13 +9113,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // تحميل إعدادات الوصف عند تحميل الصفحة
   document.addEventListener('DOMContentLoaded', function() {
-    // مسح الكاش القديم للوصف
-    const currentVersion = '2.0';
-    const savedVersion = localStorage.getItem('academyDescVersion');
-    if (savedVersion !== currentVersion) {
-      localStorage.removeItem('academyDescText');
-      localStorage.setItem('academyDescVersion', currentVersion);
-    }
     loadAcademyDescSettings();
     loadAdminSettings();
     loadAdmins();
@@ -9193,9 +9166,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const radius = localStorage.getItem('academyDescRadius') || '10px';
         const shadow = localStorage.getItem('academyDescShadow') || '0 2px 4px rgba(0,0,0,0.1)';
         
-        // الحفاظ على الهيكل الأساسي للوصف
-        const currentHTML = descBox.innerHTML;
-        if (!currentHTML.includes('academy-desc-content')) {
+        // التأكد من وجود الهيكل الجديد دائماً
+        if (!descBox.querySelector('.academy-desc-content')) {
           // إنشاء الهيكل الجديد
           descBox.innerHTML = `
             <div class="academy-desc-content">
